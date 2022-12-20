@@ -1,5 +1,4 @@
 #!/bin/bash
-# https://superuser.com/questions/951905/is-there-a-way-to-echo-a-blackslash-followed-by-newline-in-bash
 
 i=1
 SRCS="SRCS = "
@@ -11,5 +10,7 @@ for file in *.c; do
 	fi
 	((i++))
 done
+
+SRCS=${SRCS%????}
 
 echo -e $SRCS
