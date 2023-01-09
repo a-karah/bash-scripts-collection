@@ -28,6 +28,13 @@ foo@bar:~$ du -h <folder path> | sort -h
  23M	./libs/glm
  35M	./libs
  39M	.
+
+foo@bar:~$ du -sh -- * | sort -h
+ 36K	LICENSE
+288K	include
+536K	template
+764K	assets
+ 35M	libs
 ```
 
 ## References
