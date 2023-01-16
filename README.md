@@ -42,6 +42,8 @@ foo@bar:~$ du -sh -- * | sort -h
 
 [Pure bash bible](https://github.com/dylanaraps/pure-bash-bible)
 
+[Bash handbook](https://github.com/denysdovhan/bash-handbook)
+
 [^1]: https://superuser.com/questions/951905/is-there-a-way-to-echo-a-blackslash-followed-by-newline-in-bash
 
 [^2]: https://stackoverflow.com/questions/27658675/how-to-remove-last-n-characters-from-a-string-in-bash
