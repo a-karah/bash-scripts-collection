@@ -77,6 +77,18 @@ Backreference: \0 or &
 
 [Bash handbook](https://github.com/denysdovhan/bash-handbook)
 
+[Bash Pitfalls](http://mywiki.wooledge.org/BashPitfalls)
+
+[TDD Bash](https://github.com/gerhard/bash)
+
+[The Bash Hackers Wiki](https://wiki.bash-hackers.org/)
+
+[Quick tutorial](https://www.panix.com/~elflord/unix/bash-tute.html)
+
+[Shell Scripting Tutorial](https://www.shellscript.sh/)
+
+[Idempotent Bash Scripts](https://arslan.io/2019/07/03/how-to-write-idempotent-bash-scripts/)
+
 [^1]: https://superuser.com/questions/951905/is-there-a-way-to-echo-a-blackslash-followed-by-newline-in-bash
 
 [^2]: https://stackoverflow.com/questions/27658675/how-to-remove-last-n-characters-from-a-string-in-bash
