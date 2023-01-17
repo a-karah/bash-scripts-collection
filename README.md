@@ -1,4 +1,6 @@
-## One-liners:
+# One-liners:
+
+## Miscellaneous
 
 ### same as prepare-c-files-for-makefile.sh[^1][^2][^3][^4]
 ```console
@@ -37,6 +39,37 @@ foo@bar:~$ du -sh -- * | sort -h
  35M	libs
 ```
 
+# Regex
+
+## Match
+
+### Grep[^7]
+```console
+foo@bar:~$ grep -HEn '^SRCS' Makefile
+Makefile:26:SRCS := ft_strlen.cpp
+```
+
+### Grep + awk
+Useful when need to find match and quickly open in code editor
+```console
+foo@bar:~$ grep -HEn 'main' src/main.cpp | awk -F: '{print $1":"$2" "$3}'
+src/main.cpp:3 int      main(int ac, char **av)
+```
+
+### Perl[^8]
+```console
+foo@bar:~$ perl -ne 'print if /^SRCS/' Makefile
+SRCS := ft_strlen.cpp
+```
+
+## Search and replace
+
+### Vim
+```bash
+:%s/<match>/<replace>/g
+Backreference: \0 or &
+```
+
 ## References
 [Pure sh bible](https://github.com/dylanaraps/pure-sh-bible)
 
@@ -55,3 +88,7 @@ foo@bar:~$ du -sh -- * | sort -h
 [^5]: https://gist.github.com/steinwaywhw/a4cd19cda655b8249d908261a62687f8
 
 [^6]: https://unix.stackexchange.com/questions/4681/how-do-you-sort-du-output-by-size
+
+[^7]: https://stackoverflow.com/questions/8105685/show-filename-and-line-number-in-grep-output
+
+[^8]: https://www.rexegg.com/regex-perl-one-liners.html
