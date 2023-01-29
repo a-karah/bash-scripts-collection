@@ -6,6 +6,7 @@ fi
 
 echo "src = files(" > meson.build
 for i in *.c; do
-        echo "\t'$i'," >> meson.build
+	[ -f "$file" ] || continue
+	echo "\t'$i'," >> meson.build
 done
 echo ")" >> meson.build
