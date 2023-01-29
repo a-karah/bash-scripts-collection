@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ ! $1 ]; then
+	exit
+fi
+
 DIR="$(realpath $1)"
 
 MODULE=""
@@ -11,12 +15,13 @@ LOCAL_DIR="LOCAL_DIR := $(basename $DIR)\n"
 i=1
 SRCS="LOCAL_SRCS := "
 for file in $DIR/*.c; do
-        if [ $i -eq 1 ]; then
-				SRCS+="$(basename $file) \\\\\n"
-        else
-                SRCS+="\t\t$(basename $file) \\\\\n"
-        fi
-        ((i++))
+	[ -f "$file" ] || continue
+	if [ $i -eq 1 ]; then
+		SRCS+="$(basename $file) \\\\\n"
+	else
+		SRCS+="\t\t$(basename $file) \\\\\n"
+	fi
+	((i++))
 done
 SRCS=${SRCS%????}
 
