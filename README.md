@@ -39,6 +39,11 @@ foo@bar:~$ du -sh -- * | sort -h
  35M	libs
 ```
 
+### create folder in each subfolder
+```bash
+for dir in */; do mkdir -- "$dir/<folder-name>"; done
+```
+
 # Regex
 
 ## Match
