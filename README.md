@@ -2,7 +2,7 @@
 
 ## Miscellaneous
 
-### same as prepare-c-files-for-makefile.sh[^1][^2][^3][^4]
+### same as prepare-c-files-for-makefile.sh [^1] [^2] [^3] [^4]
 ```console
 foo@bar:~$ ls -1 <path to src folder> | sed -z 's/\n/ \\\n/g'
 ft_atoi.c \
@@ -11,7 +11,7 @@ ft_calloc.c \
 ...
 ```
 
-### download release builds from github using curl and wget[^5]
+### download release builds from github using curl and wget [^5]
 ```bash
 curl -s https://api.github.com/repos/<ogranization-name>/<repo-name>/releases/latest \
 | grep "browser_download_url.*zip" \
@@ -20,7 +20,7 @@ curl -s https://api.github.com/repos/<ogranization-name>/<repo-name>/releases/la
 | wget -qi -
 ```
 
-### show sorted used space[^6]
+### show sorted used space [^6]
 ```console
 foo@bar:~$ du -h <folder path> | sort -h
 3.2M	./libs/glfw/docs/html
@@ -39,7 +39,7 @@ foo@bar:~$ du -sh -- * | sort -h
  35M	libs
 ```
 
-### create folder in each subfolder
+### create folder in each subfolder [^9]
 ```bash
 for dir in */; do mkdir -- "$dir/<folder-name>"; done
 ```
@@ -109,3 +109,5 @@ Backreference: \0 or &
 [^7]: https://stackoverflow.com/questions/8105685/show-filename-and-line-number-in-grep-output
 
 [^8]: https://www.rexegg.com/regex-perl-one-liners.html
+
+[^9]: https://unix.stackexchange.com/questions/61907/how-do-i-create-a-directory-in-all-subdirectories
